@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+
+  /* Neutral */
+
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--light-gray);
+}
+
+.container {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--white);
+
+  width: 700px;
+  gap: 0.5rem;
+}
+
+.container aside {
+  background-image: url(.././assets/images/bg-sidebar-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 2rem;
+  border-radius: 8px;
+  flex: 1;
+  align-self: stretch;
+}
+
+.container .wrapper {
+  flex: 3;
+  height: 450px;
+  position: relative;
+}
+
+li.flex {
+  padding: 8px;
+  border-radius: 4px;
+  list-style: none;
+  gap: 0.6rem;
+  justify-content: flex-start;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+li:hover {
+  transition: 0.3s all ease-in-out;
+  background-color: hsl(243, 65%, 54%);
+  scale: 1.02;
+}
+
+li button {
+  display: grid;
+  place-content: center;
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: 0.5px solid var(--light-blue);
+  border-radius: 50%;
+  color: var(--magnolia);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+li:not(:first-child) {
+  margin-top: 1.2rem;
+}
+
+.ls-info p:last-child {
+  font-size: 0.7rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.step-2_parent {
+  display: none;
+}
+.addons {
+  display: none;
+}
+
+.finishing {
+  display: none;
+}
+
+.thanks {
+  display: none;
+}
+
+.card,
+.step-2_parent,
+.addons,
+.finishing {
+  padding: 1.8rem;
+}
+
+.card > h2,
+.step-2_parent > h2,
+.addons > h2,
+.finishing > h2 {
+  color: var(--marine-blue);
+}
+
+.card > p,
+.step-2_parent > p,
+.addons > p,
+.finishing > p {
+  font-size: 0.8rem;
+  color: var(--cool-gray);
+  margin-top: 8px;
+}
+
+form {
+  margin-top: 1.8rem;
+}
+
+.form-details > div {
+  position: relative; /* for the sake of errors msg */
+}
+
+.form-details > div:not(:first-child) {
+  margin-top: 0.8rem;
+}
+
+label {
+  color: var(--marine-blue);
+}
+
+input {
+  outline: none;
+  padding: 10px;
+  border: 0.5px solid var(--light-gray);
+  border-radius: 3px;
+  width: 100%;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:hover,
+div.box:hover,
+div.choose:hover {
+  border-color: var(--purplish-blue);
+}
+
+.error {
+  color: var(--strawberry-red);
+  background-color: var(--white);
+  padding: 0px 4px;
+
+  position: absolute;
+  right: 12px;
+  top: 1.05rem;
+}
+
+div.actions {
+  padding: 0 1.8rem;
+  justify-content: space-between;
+
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+}
+
+.btn {
+  display: block;
+  padding: 10px;
+  width: 100px;
+  border-radius: 4px;
+  border: 0;
+  background-color: var(--marine-blue);
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.btn-prev {
+  background-color: transparent;
+  color: var(--marine-blue);
+  border: 0.5px solid transparent;
+}
+
+.btn-prev:hover {
+  border-color: var(--light-gray);
+}
+
+.btn:hover,
+.box:hover {
+  scale: 1.02;
+}
+
+/* STEP 2 */
+div.boxs {
+  margin-top: 1.8rem;
+  justify-content: flex-start;
+  gap: 0.6rem;
+}
+
+div.box {
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  height: 130px;
+  width: 120px;
+  border: 0.5px solid var(--light-gray);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+
+.box > div p:first-child {
+  font-weight: 600;
+  color: var(--marine-blue);
+}
+.box > div p:last-child {
+  color: var(--cool-gray);
+  margin-top: 2px;
+}
+
+.plan {
+  margin-top: 1.8rem;
+  border-radius: 3px;
+  background-color: var(--magnolia);
+  padding: 0.4rem;
+  gap: 0.8rem;
+}
+
+.plan p {
+  color: var(--cool-gray);
+  font-weight: 500;
+}
+
+.plan p.monthly {
+  color: var(--marine-blue);
+}
+
+.plan > div {
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: var(--marine-blue);
+  padding: 0 3px;
+
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.plan > div .circle {
+  height: 22px;
+  width: 22px;
+  background-color: var(--light-blue);
+  border-radius: 50%;
+  transition: 0.2s all ease-in;
+}
+
+/* STEP 3 */
+.chooses {
+  margin-top: 1.8rem;
+}
+
+.chooses div.choose:not(:first-child) {
+  margin-top: 0.8rem;
+}
+
+div.choose,
+.finish-card {
+  padding: 0.8rem;
+  background-color: var(--magnolia);
+  border: 0.5px solid var(--light-gray);
+  border-radius: 4px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+div.info {
+  gap: 0.6rem;
+}
+
+div.choose .info .check-box {
+  border: 0.5px solid var(--light-gray);
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div.choose .info .check-box img {
+  object-fit: cover;
+  object-position: center;
+
+  height: 60%;
+  width: 60%;
+  display: none;
+}
+
+div.choose .info .check-box:hover {
+  background-color: var(--purplish-blue);
+}
+div.choose .info .check-box:hover img {
+  display: block;
+}
+
+div.choose div div p:first-child {
+  color: var(--marine-blue);
+  font-weight: 600;
+}
+div.choose div div p:last-child {
+  color: var(--cool-gray);
+  margin-top: 3px;
+}
+
+.choose_month {
+  color: var(--purplish-blue);
+}
+
+/* STEP 4 */
+
+.finish-card {
+  padding: 1rem;
+}
+
+.finish-card .flex {
+  justify-content: space-between;
+}
+
+.card-picked {
+  padding: 8px 0;
+  transition: 0.2s all ease-in;
+}
+
+.card-picked:hover {
+  scale: 1.04;
+}
+
+.finish-card .card-picked:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.finish-card > .flex div p:last-child {
+  margin-top: 4px;
+  color: var(--purplish-blue);
+  cursor: pointer;
+  width: fit-content;
+
+  scale: 0;
+}
+
+/* make bold */
+.card-picked:hover div p:first-child,
+.card-picked:hover > p {
+  font-weight: 500;
+}
+
+/* display change */
+.card-picked:hover div p:last-child {
+  scale: 1;
+}
+
+.finish-card > .flex div p:last-child:hover {
+  text-decoration: underline;
+}
+
+div.total {
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+div.total p {
+  padding: 0 0.8rem;
+}
+
+div.total p:first-child {
+  color: var(--cool-gray);
+}
+
+div.total p:last-child {
+  color: var(--purplish-blue);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Thanks */
+.thanks {
+  padding: 1rem;
+}
+
+.thanks img {
+  display: block;
+  margin: 0 auto;
+}
+
+.thanks h2 {
+  margin-top: 1.2rem;
+  text-align: center;
+  color: var(--marine-blue);
+}
+
+.thanks blockquote {
+  margin-top: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--cool-gray);
+}
+
+/* utilites */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-txt {
+  color: var(--light-gray);
+  font-size: 0.6rem;
+}
+
+.t-md {
+  font-size: 0.8rem;
+}
+
+.t-sm {
+  font-size: 0.65rem;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.active-aside {
+  background-color: var(--light-blue);
+  color: var(--marine-blue);
+}
+
+.active-box,
+.active-choose {
+  border-color: var(--purplish-blue) !important;
+}
+
+.toggle {
+  transform: translateX(21.8px);
+}
+
+.active-plan {
+  color: var(--marine-blue) !important; /* it could be monthly OR yearly*/
+}

@@ -1,0 +1,21 @@
+/* Media queries */
+@media only screen and (max-width: 650px) {
+  .container {
+    width: 450px;
+    flex-direction: column;
+    scale: 0.9;
+  }
+
+  .container aside {
+    background-image: url(../assets/images/bg-sidebar-mobile.svg);
+  }
+
+  .wrapper {
+    height: 100%;
+  }
+
+  div.actions {
+    margin-top: 2rem;
+    position: initial;
+  }
+}

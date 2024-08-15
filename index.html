@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="flex">
+    <div class="container flex">
+      <aside>
+        <ul>
+          <li class="flex">
+            <button class="active-aside">1</button>
+            <div class="ls-info">
+              <p class="step-txt">STEP 1</p>
+              <p>YOUR INFO</p>
+            </div>
+          </li>
+          <li class="flex">
+            <button>2</button>
+            <div class="ls-info">
+              <p class="step-txt">STEP 2</p>
+              <p>SELECT PLAN</p>
+            </div>
+          </li>
+          <li class="flex">
+            <button>3</button>
+            <div class="ls-info">
+              <p class="step-txt">STEP 3</p>
+              <p>ADD-ONS</p>
+            </div>
+          </li>
+          <li class="flex">
+            <button>4</button>
+            <div class="ls-info">
+              <p class="step-txt">STEP 4</p>
+              <p>SUMMARY</p>
+            </div>
+          </li>
+        </ul>
+      </aside>
+      <div class="wrapper">
+        <div class="parent">
+          <!-- #step 1 -->
+          <div class="card" data-id="1">
+            <h2>Personal info</h2>
+            <p>Please provide your name, email address, and phone number.</p>
+            <form action="#">
+              <div class="form-details">
+                <div>
+                  <label for="name" class="t-md">Name</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="e.g. Stephen King"
+                  />
+                  <span class="error name-error t-sm hide"
+                    >This field is required!</span
+                  >
+                </div>
+                <div>
+                  <label for="email" class="t-md">Email</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="e.g. stephenking@lorem.com"
+                  />
+                  <span class="error email-error t-sm hide"
+                    >Valid email is required!</span
+                  >
+                </div>
+                <div>
+                  <label for="number" class="t-md">Phone Number</label>
+                  <br />
+                  <input
+                    type="number"
+                    name="number"
+                    id="number"
+                    placeholder="e.g. +1 234 567 890"
+                  />
+                  <span class="error number-error t-sm hide"
+                    >This field is required!</span
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- #step 2 -->
+          <div class="step-2_parent" data-id="2">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
+            <div class="boxs flex">
+              <div class="box-1 box flex">
+                <img src="./assets/images/icon-arcade.svg" alt="" />
+                <div>
+                  <p class="t-md">Arcade</p>
+                  <p class="t-sm">$9/mon</p>
+                </div>
+              </div>
+              <div class="box-2 box flex">
+                <img src="./assets/images/icon-advanced.svg" alt="" />
+                <div>
+                  <p class="t-md">Advanced</p>
+                  <p class="t-sm">$12/mon</p>
+                </div>
+              </div>
+              <div class="box-3 box flex">
+                <img src="./assets/images/icon-pro.svg" alt="" />
+                <div>
+                  <p class="t-md">Pro</p>
+                  <p class="t-sm">$15/mon</p>
+                </div>
+              </div>
+            </div>
+            <div class="plan flex">
+              <p class="t-md monthly">Monthly</p>
+              <div class="flex btn-toggle"><div class="circle"></div></div>
+              <p class="t-md yearly">Yearly</p>
+            </div>
+          </div>
+          <!-- #step 3 -->
+          <div class="addons" data-id="3">
+            <h2>Pick add-ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p>
+            <div class="chooses">
+              <!-- 1 -->
+              <div class="choose flex">
+                <div class="flex info">
+                  <div class="check-box flex">
+                    <img
+                      src="./assets/images/icon-checkmark.svg"
+                      alt="icon-checkmark"
+                    />
+                  </div>
+                  <div>
+                    <p class="t-md addons-title">Online service</p>
+                    <p class="t-md">Access to multiplayer games</p>
+                  </div>
+                </div>
+                <p class="choose_month t-md">+$1/mo</p>
+              </div>
+              <!-- 2 -->
+              <div class="choose flex">
+                <div class="flex info">
+                  <div class="check-box flex">
+                    <img
+                      src="./assets/images/icon-checkmark.svg"
+                      alt="icon-checkmark"
+                    />
+                  </div>
+                  <div>
+                    <p class="t-md addons-title">Larger storage</p>
+                    <p class="t-md">Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <p class="choose_month t-md">+$2/mo</p>
+              </div>
+              <!-- 3 -->
+              <div class="choose flex">
+                <div class="flex info">
+                  <div class="check-box flex">
+                    <img
+                      src="./assets/images/icon-checkmark.svg"
+                      alt="icon-checkmark"
+                    />
+                  </div>
+                  <div>
+                    <p class="t-md addons-title">Customizable Profile</p>
+                    <p class="t-md">Custom theme on your profile</p>
+                  </div>
+                </div>
+                <p class="choose_month t-md">+$2/mo</p>
+              </div>
+            </div>
+          </div>
+          <!-- #Step 4 -->
+          <div class="finishing" data-id="4">
+            <h2>Finishing up</h2>
+            <p>Double-check everything looks OK before confirming.</p>
+            <div class="chooses finish-card">
+              <!-- waxey ku xirnan donta waxa qofka u select gareyo -->
+              <div class="card-picked flex">
+                <div>
+                  <p class="t-md">Arcade (Monthly)</p>
+                  <p class="t-sm">Change</p>
+                </div>
+                <p class="t-md">$9/mon</p>
+              </div>
+              <!-- 2 -->
+              <div class="card-picked flex">
+                <div>
+                  <p class="t-md">Online service</p>
+                  <p class="t-sm">Change</p>
+                </div>
+                <p class="t-md">$1/mon</p>
+              </div>
+              <!-- 3 -->
+              <div class="card-picked flex">
+                <div>
+                  <p class="t-md">Large Storage</p>
+                  <p class="t-sm">Change</p>
+                </div>
+                <p class="t-md">$2/mon</p>
+              </div>
+            </div>
+            <div class="total flex">
+              <p class="t-md label-total">Total (per month)</p>
+              <p class="t-md label-month">+12/mon</p>
+            </div>
+          </div>
+        </div>
+        <div class="actions flex">
+          <button class="btn btn-prev t-md hide">Go Back</button>
+          <button class="btn btn-next t-md">Next Step</button>
+        </div>
+        <div class="thanks">
+          <img src="./assets/images/icon-thank-you.svg" alt="" />
+          <h2>Thank you!</h2>
+          <blockquote>
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com.
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
